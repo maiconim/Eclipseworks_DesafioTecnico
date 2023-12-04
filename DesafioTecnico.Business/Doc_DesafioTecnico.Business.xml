@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesafioTecnico.Business</name>
+    </assembly>
+    <members>
+        <member name="F:DesafioTecnico.Business.Commons.TipoUsuarioEnum.Usuario">
+            <summary>
+            Usuário
+            </summary>
+        </member>
+        <member name="F:DesafioTecnico.Business.Commons.TipoUsuarioEnum.Gerencia">
+            <summary>
+            Gerência
+            </summary>
+        </member>
+        <member name="T:DesafioTecnico.Business.Migrations._001">
+            <inheritdoc />
+        </member>
+        <member name="M:DesafioTecnico.Business.Migrations._001.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DesafioTecnico.Business.Migrations._001.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DesafioTecnico.Business.Migrations._001.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DesafioTecnico.Business.Repositories.IProjetoRepository.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Lista os projetos do banco de dados
+            </summary>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns></returns>
+        </member>
+        <member name="M:DesafioTecnico.Business.Repositories.IProjetoRepository.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Recupera do banco de dados um projeto pelo seu ID
+            </summary>
+            <param name="id">ID do projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:DesafioTecnico.Business.Services.Models.ProjetoModel"/>Projeto ou nulo</returns>
+        </member>
+        <member name="M:DesafioTecnico.Business.Services.IProjetoService.ListarProjetosAsync(System.Threading.CancellationToken)">
+            <summary>
+            Lista os projetos cadastrados
+            </summary>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/>Lista dos projetos</returns>
+        </member>
+    </members>
+</doc>

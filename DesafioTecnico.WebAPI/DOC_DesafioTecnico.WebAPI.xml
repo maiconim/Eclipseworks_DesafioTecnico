@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesafioTecnico.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:DesafioTecnico.WebAPI.Controllers.ProjetoController">
+            <summary>
+            Fornece métodos para gerencimaneto dos projetos
+            </summary>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.ProjetoController.ListAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Threading.CancellationToken)">
+            <summary>
+            Listar todos os projetos
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/>Lista com os projetos</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.ProjetoController.GetAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Busca projeto pelo identificador interno
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno do projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:DesafioTecnico.Business.Mediator.Queries.Project.BuscarProjetoQueryResponse"/>Detalhes do projeto</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.ProjetoController.IncluirAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},DesafioTecnico.Business.Mediator.Commands.Project.IncluirProjetoCommandRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adiciona um novo projeto
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="request"><see cref="T:DesafioTecnico.Business.Mediator.Commands.Project.IncluirProjetoCommandRequest"/>Informações do projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns>Identificador interno do projeto</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.ProjetoController.AlterarAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,DesafioTecnico.Business.Mediator.Commands.Project.ModificarProjetoCommandRequest,System.Threading.CancellationToken)">
+            <summary>
+            Modifica informações do projeto
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno do projeto</param>
+            <param name="request"><see cref="T:DesafioTecnico.Business.Mediator.Commands.Project.ModificarProjetoCommandRequest"/>Informações a serem modificadas no projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.ProjetoController.ApagarAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Apaga um projeto
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno do projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+        </member>
+        <member name="T:DesafioTecnico.WebAPI.Controllers.RelatoriosController">
+            <summary>
+            Relatórios
+            </summary>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.RelatoriosController.MediaTarefasConcluidasPorUsuarioAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Threading.CancellationToken)">
+            <summary>
+            Relatório de tarefas concluídas por usuário (gerencial)
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns></returns>
+        </member>
+        <member name="T:DesafioTecnico.WebAPI.Controllers.TarefaController">
+            <summary>
+            Fornece métodos para genrencimento das tarefas
+            </summary>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.ListAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Nullable{System.Guid},System.Threading.CancellationToken)">
+            <summary>
+            Lista todas as tarefas de um determinado projeto
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="projetoId">Identificador interno do projeto</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:System.Collections.Generic.IEnumerable`1"/>Lista das tarefas do projeto</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.GetAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Busca pelo identificador interno
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno da tarefa</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns><see cref="T:DesafioTecnico.Business.Mediator.Queries.Task.BuscarTarefaQueryResponse"/>Informações da tarefa</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.AddAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},DesafioTecnico.Business.Mediator.Commands.Task.IncluirTarefaCommandRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adicionar
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="request"><see cref="T:DesafioTecnico.Business.Mediator.Commands.Task.IncluirTarefaCommandRequest"/>Informações da tarefa</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+            <returns>Identificador interno da tarefa</returns>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.UpdateAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,DesafioTecnico.Business.Mediator.Commands.Task.ModificarTarefaCommandRequest,System.Threading.CancellationToken)">
+            <summary>
+            Altera informações
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno da tarefa</param>
+            <param name="request"><see cref="T:DesafioTecnico.Business.Mediator.Commands.Task.ModificarTarefaCommandRequest"/>Informações a serem modificadas na tarefa</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.DeleteAsync(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Apagar
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+        </member>
+        <member name="M:DesafioTecnico.WebAPI.Controllers.TarefaController.AdicionarComentario(System.Nullable{DesafioTecnico.Business.Commons.TipoUsuarioEnum},System.Guid,DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioRequest,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="user">Informe 0 para usuário comum ou 1 para usuário gerencial</param>
+            <param name="id">Identificador interno</param>
+            <param name="request"><see cref="T:DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioRequest"/>Comentário</param>
+            <param name="cancellationToken">Token de cancelamento</param>
+        </member>
+    </members>
+</doc>
