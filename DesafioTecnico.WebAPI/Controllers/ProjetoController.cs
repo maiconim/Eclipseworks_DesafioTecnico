@@ -2,7 +2,6 @@
 using DesafioTecnico.Business.Mediator.Commands.Project;
 using DesafioTecnico.Business.Mediator.Queries.Project;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
@@ -17,10 +16,12 @@ namespace DesafioTecnico.WebAPI.Controllers
     {
         private readonly IMediator _mediator;
 
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
         public ProjetoController(IMediator mediator)
         {
             _mediator = mediator;
         }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
 
         /// <summary>
         /// Listar todos os projetos

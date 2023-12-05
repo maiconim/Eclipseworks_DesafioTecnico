@@ -2,10 +2,8 @@
 using DesafioTecnico.Business.Mediator.Commands.Task;
 using DesafioTecnico.Business.Mediator.Queries.Task;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
 
 namespace DesafioTecnico.WebAPI.Controllers
 {
@@ -18,10 +16,12 @@ namespace DesafioTecnico.WebAPI.Controllers
     {
         private readonly IMediator _mediator;
 
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
         public TarefaController(IMediator mediator)
         {
             _mediator = mediator;
         }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
 
         /// <summary>
         /// Lista todas as tarefas de um determinado projeto

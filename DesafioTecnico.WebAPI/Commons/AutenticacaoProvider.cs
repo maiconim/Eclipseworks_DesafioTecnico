@@ -2,7 +2,7 @@
 
 namespace DesafioTecnico.WebAPI.Commons
 {
-    public class AutenticacaoProvider : IAutenticacaoProvider
+    internal class AutenticacaoProvider : IAutenticacaoProvider
     {
         public bool Autenticado { get; private set; }
         public string? Usuario { get; private set; }

@@ -74,6 +74,9 @@ namespace DesafioTecnico.Business.Services.Impl
 
         public async Task AdicionarComentarioAsync(Guid tarefaID, string comentario, CancellationToken cancellationToken)
         {
+            if (string.IsNullOrWhiteSpace(_autenticacaoProvider.Usuario))
+                throw new Exception("Usuário não informado.");
+
             var tarefa = await _tarefaRepository.GetAsync(tarefaID, cancellationToken)
                 ?? throw new Exception($"Tarefa '{tarefaID}' não encontrada.");
 

@@ -2,7 +2,7 @@
 
 namespace DesafioTecnico.WebAPI.Commons
 {
-    public class AutenticacaoMiddleware
+    internal class AutenticacaoMiddleware
     {
         private readonly RequestDelegate _next;
 

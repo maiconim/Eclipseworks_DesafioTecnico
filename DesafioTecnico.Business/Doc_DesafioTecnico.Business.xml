@@ -14,6 +14,26 @@
             Gerência
             </summary>
         </member>
+        <member name="T:DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioRequest.TarefaId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioRequest.Comentario">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DesafioTecnico.Business.Mediator.Commands.Task.AdicionarComentarioResponse">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DesafioTecnico.Business.Migrations._001">
             <inheritdoc />
         </member>

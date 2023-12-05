@@ -23,12 +23,8 @@ builder.Services.AddScoped<IAutenticacaoProvider, AutenticacaoProvider>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseMiddleware<AutenticacaoMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthorization();

@@ -16,6 +16,7 @@ namespace DesafioTecnico.WebAPI.Controllers
         private readonly IMediator _mediator;
         private readonly IAutenticacaoProvider _autenticacaoProvider;
 
+#pragma warning disable CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
         public RelatoriosController(
             IMediator mediator,
             IAutenticacaoProvider autenticacaoProvider) : base()
@@ -23,6 +24,8 @@ namespace DesafioTecnico.WebAPI.Controllers
             _mediator = mediator;
             _autenticacaoProvider = autenticacaoProvider;
         }
+#pragma warning restore CS1591 // O comentário XML ausente não foi encontrado para o tipo ou membro visível publicamente
+
         /// <summary>
         /// Relatório de tarefas concluídas por usuário (gerencial)
         /// </summary>
