@@ -20,9 +20,11 @@ A solução está apta a ser executada via Docker ou Http.
 
 Para iniciar em Docker, use a sequencia de comandos a seguir no Prompt de Comando em modo administrativo na pasta rais da solução:
 
-'docker build -t maicon-milke -f .\DesafioTecnico.WebAPI\Dockerfile .'
-'docker create --name maicon-milke maicon-milke'
-'docker run -d -p 5000:80/tcp --name maicon-milke maicon-milke'
+```
+docker build -t maicon-milke -f .\DesafioTecnico.WebAPI\Dockerfile .
+docker create --name maicon-milke maicon-milke
+docker run -d -p 5000:80/tcp --name maicon-milke maicon-milke
+```
 
 Acesse no seu browser o endereço http://localhost:5000/swagger/index.html.
 
